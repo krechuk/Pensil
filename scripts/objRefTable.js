@@ -5,11 +5,11 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Browser,
 		C3.Plugins.Sprite,
 		C3.Plugins.System.Cnds.OnLayoutStart,
-		C3.Plugins.System.Cnds.EveryTick,
-		C3.Plugins.System.Cnds.Every,
-		C3.JavaScriptInEvents.EventSheet1_Event3_Act1,
+		C3.JavaScriptInEvents.EventSheet1_Event1_Act1,
 		C3.Plugins.Text.Acts.SetText,
-		C3.Plugins.Sprite.Acts.LoadURL
+		C3.Plugins.Sprite.Acts.LoadURL,
+		C3.Plugins.System.Cnds.EveryTick,
+		C3.Plugins.System.Cnds.Every
 	];
 };
 self.C3_JsPropNameTable = [
