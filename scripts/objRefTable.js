@@ -13,11 +13,13 @@ self.C3_GetObjectRefTable = function () {
 self.C3_JsPropNameTable = [
 	{UserID: 0},
 	{UserName: 0},
-	{Browser: 0}
+	{Browser: 0},
+	{Text: 0}
 ];
 
 self.InstanceType = {
 	UserID: class extends self.ITextInstance {},
 	UserName: class extends self.ITextInstance {},
-	Browser: class extends self.IInstance {}
+	Browser: class extends self.IInstance {},
+	Text: class extends self.ITextInstance {}
 }
