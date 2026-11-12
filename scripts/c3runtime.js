@@ -1276,6 +1276,7 @@ self["C3_Shaders"] = {};
 
 // scripts/expTable.js
 {
+<<<<<<< HEAD
 
 const C3 = self.C3;
 
@@ -1379,6 +1380,110 @@ self.C3_ExpressionFuncs = [
 		}
 ];
 
+=======
+
+const C3 = self.C3;
+
+function unaryminus(n)
+{
+	return (typeof n === "number" ? -n : n);
+}
+
+function bothNumbers(a, b)
+{
+	return typeof a === "number" && typeof b === "number";
+}
+
+function add(l, r)
+{
+	if (bothNumbers(l, r))
+		return l + r;
+	else
+		return l;
+}
+
+function subtract(l, r)
+{
+	if (bothNumbers(l, r))
+		return l - r;
+	else
+		return l;
+}
+
+function multiply(l, r)
+{
+	if (bothNumbers(l, r))
+		return l * r;
+	else
+		return l;
+}
+
+function divide(l, r)
+{
+	if (bothNumbers(l, r))
+		return l / r;
+	else
+		return l;
+}
+
+function mod(l, r)
+{
+	if (bothNumbers(l, r))
+		return l % r;
+	else
+		return l;
+}
+
+function pow(l, r)
+{
+	if (bothNumbers(l, r))
+		return Math.pow(l, r);
+	else
+		return l;
+}
+
+function and(l, r)
+{
+	if (typeof l === "string" || typeof r === "string")
+	{
+		// & with either side string does string concatenation
+		let lstr, rstr;
+
+		if (typeof l === "number")
+			lstr = (Math.round(l * 1e10) / 1e10).toString();
+		else
+			lstr = l;
+		
+		if (typeof r === "number")
+			rstr = (Math.round(r * 1e10) / 1e10).toString();
+		else
+			rstr = r;
+		
+		return lstr + rstr;
+	}
+	else
+	{
+		// & with neither side a string does logical AND
+		return (l && r ? 1 : 0);
+	}
+}
+
+function or(l, r)
+{
+	if (bothNumbers(l, r))
+		return (l || r ? 1 : 0);
+	else
+		return l;
+}
+
+self.C3_ExpressionFuncs = [
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => v0.GetValue();
+		}
+];
+
+>>>>>>> 5a8af139e75d0be022b4260b75f98179d19526ea
 
 }
 
