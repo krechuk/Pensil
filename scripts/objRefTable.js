@@ -3,23 +3,28 @@ self.C3_GetObjectRefTable = function () {
 	return [
 		C3.Plugins.Text,
 		C3.Plugins.Browser,
+		C3.Plugins.Sprite,
 		C3.Plugins.System.Cnds.OnLayoutStart,
 		C3.Plugins.System.Cnds.EveryTick,
 		C3.Plugins.System.Cnds.Every,
 		C3.JavaScriptInEvents.EventSheet1_Event3_Act1,
-		C3.Plugins.Text.Acts.SetText
+		C3.Plugins.Text.Acts.SetText,
+		C3.Plugins.Sprite.Acts.LoadURL
 	];
 };
 self.C3_JsPropNameTable = [
 	{UserID: 0},
 	{UserName: 0},
 	{Browser: 0},
-	{Text: 0}
+	{Text: 0},
+	{Avatar: 0},
+	{UserPhoto: 0}
 ];
 
 self.InstanceType = {
 	UserID: class extends self.ITextInstance {},
 	UserName: class extends self.ITextInstance {},
 	Browser: class extends self.IInstance {},
-	Text: class extends self.ITextInstance {}
+	Text: class extends self.ITextInstance {},
+	Avatar: class extends self.ISpriteInstance {}
 }

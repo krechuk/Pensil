@@ -13,6 +13,7 @@ const scriptsInEvents = {
 		const username = user?.username;
 		runtime.globalVars.UserID = userId;
 		runtime.globalVars.UserName = firstName;
+		runtime.globalVars.UserPhoto = user?.photo_url || "";
 	}
 };
 
