@@ -2,7 +2,7 @@
 
 const scriptsInEvents = {
 
-	async EventSheet1_Event1_Act1(runtime, localVars)
+	async EventSheet1_Event3_Act1(runtime, localVars)
 	{
 		const tg = window.Telegram.WebApp;
 		tg.ready();

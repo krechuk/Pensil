@@ -4,8 +4,9 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Text,
 		C3.Plugins.Browser,
 		C3.Plugins.System.Cnds.OnLayoutStart,
-		C3.JavaScriptInEvents.EventSheet1_Event1_Act1,
 		C3.Plugins.System.Cnds.EveryTick,
+		C3.Plugins.System.Cnds.Every,
+		C3.JavaScriptInEvents.EventSheet1_Event3_Act1,
 		C3.Plugins.Text.Acts.SetText
 	];
 };
